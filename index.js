@@ -78,12 +78,11 @@ app.post("/auth", async (req, res) => {
 
 app.get("/", async (req, res) => {
   console.log("Hello Ditto - post your JWT token to /auth to use this example properly!");
+  res.send("Hello Ditto - post your JWT token to /auth to use this example properly!");
 });
 
-
-
-app.listen(() => {
-  console.log("listening on http://localhost:" + 3000);
+app.listen(3000, () => {
+  console.log("listening on http://localhost:3000");
 });
 
 module.exports = app;
